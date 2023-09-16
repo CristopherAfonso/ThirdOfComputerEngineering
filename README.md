@@ -1,1 +1,3 @@
 # ThirdOfComputerEngineering
+
+Here I keep all the programs related to this year's subjects: AC = Arquitectura de Computadores (Computer Architecture); DP = Diseño de Procesadores (Processor Design); IA = Inteligencia Artificial (artificial intelligence); LabRedes = Laboratorio de Redes en Ingeniería de Computadores (Laboratory of Networks in Computer Engineering); LPP = Lenguajes y Paradigmas de Programación (Programming languages and paradigms); SIPC = Sistemas de Interacción Persona-Computador (Human-Computer Interaction Systems); SOA = Sistemas Operativos Avanzados (Advanced operating systems).
