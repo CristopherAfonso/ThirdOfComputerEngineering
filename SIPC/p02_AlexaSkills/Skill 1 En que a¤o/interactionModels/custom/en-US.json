@@ -1,0 +1,114 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "what year did it happen",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AnswerIntent",
+          "slots": [
+            {
+              "name": "numberSlot",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER"
+            }
+          ],
+          "samples": [
+            "Year {numberSlot}",
+            "The answer is {numberSlot}",
+            "It is {numberSlot}",
+            "In year {numberSlot}",
+            "In the year {numberSlot}",
+            "Answer is {numberSlot}"
+          ]
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": [
+            "Of course",
+            "Yes",
+            "Aha",
+            "Yep",
+            "Sure",
+            "Indeed"
+          ]
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": [
+            "again",
+            "say it again",
+            "can you repeat please",
+            "repeat",
+            "repeat again",
+            "again please"
+          ]
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": [
+            "noo",
+            "I dont want to",
+            "nop",
+            "na",
+            "no thanks",
+            "noup",
+            "no way",
+            "no"
+          ]
+        },
+        {
+          "name": "ClueIntent",
+          "slots": [],
+          "samples": [
+            "clue",
+            "any clue",
+            "any clue please",
+            "give me a clue",
+            "a clue",
+            "tell me a clue",
+            "more information",
+            "no idea"
+          ]
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": [
+            "next one",
+            "tell me the next question",
+            "next",
+            "next question",
+            "tell me the next one",
+            "other"
+          ]
+        },
+        {
+          "name": "PendingIntent",
+          "slots": [],
+          "samples": [
+            "pending",
+            "tell me the pending question",
+            "tell me the pending",
+            "what was the pending question"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "6"
+}

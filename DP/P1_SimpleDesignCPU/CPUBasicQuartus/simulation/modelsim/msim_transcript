@@ -1,0 +1,59 @@
+# ERROR: No extended dataflow license exists
+# do CPU_run_msim_gate_verilog.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying /opt/altera/12.1sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/12.1sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+. {CPU.vo}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# 
+# vlog -vlog01compat -work work +incdir+/home/alumno/pr1_processor_design {/home/alumno/pr1_processor_design/cpu_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs="+acc"  cpu_tb
+# vsim +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps cpu_tb 
+# Loading work.cpu_tb
+# Loading work.CPU
+# Loading cycloneii_ver.cycloneii_lcell_ff
+# Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading cycloneii_ver.cycloneii_io
+# Loading cycloneii_ver.cycloneii_mux21
+# Loading cycloneii_ver.cycloneii_dffe
+# Loading cycloneii_ver.cycloneii_asynch_io
+# Loading cycloneii_ver.cycloneii_clkctrl
+# Loading cycloneii_ver.cycloneii_mux41
+# Loading cycloneii_ver.cycloneii_ena_reg
+# Loading instances from CPU_v.sdo
+# Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
+# Loading timing data from CPU_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_tb File: /home/alumno/pr1_processor_design/cpu_tb.v
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $finish    : /home/alumno/pr1_processor_design/cpu_tb.v(43)
+#    Time: 660 ns  Iteration: 0  Instance: /cpu_tb
+# 1
+# Break in Module cpu_tb at /home/alumno/pr1_processor_design/cpu_tb.v line 43
+# Simulation Breakpoint: 1
+# Break in Module cpu_tb at /home/alumno/pr1_processor_design/cpu_tb.v line 43
+# MACRO ./CPU_run_msim_gate_verilog.do PAUSED at line 17
+# Break key hit 

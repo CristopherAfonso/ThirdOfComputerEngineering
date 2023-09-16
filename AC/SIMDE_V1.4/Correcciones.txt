@@ -1,0 +1,31 @@
+20/01/05
+Corregido bug al pulsar enter en la última fila de un cuadro de componente (memoria, GPR o FPR).
+25/01/05
+Versión 1.2 de SIMDE. Versión bilingüe: inglés-español
+10/03/05
+Permitida la entrada de números negativos con la instrucción DADDUI
+14/03/05
+Permitida la introducción de offset negativos en las instrucciones de acceso a memoria
+14/03/05
+Cambio de idioma dinámico (en pruebas)
+15/03/05
+Corregido bug con las etiquetas de los códigos fuente
+16/03/05
+Parcheado error con las direcciones de memoria negativa (solución temporal)
+16/03/05
+CAMBIO QUE SUPONEN INCOMPATIBILIDAD CON CODIGOS DE VERSIONES ANTERIORES
+Sustituidos nemónicos en el código:
+- DADDUI por el más correcto ADDI al admitir constantes negativas
+- ADDI => ADD (suma de palabra en MIPS)
+- MULTI => MULT
+- SI => SW
+- LI => LW
+Todos los ejemplos incluidos han sido cambiados para soportar los nuevos términos.
+5/07/05
+Añadiendo opción de cargar contenidos de memoria y registros desde fichero.
+- Añadidas funciones a TMemoria y TRegistro para copiar directamente un array
+- Añadido cuadro de diálogo para escoger las máquinas que se inicializan con los datos
+- Arreglado bug con el control de errores de los números en estos cuadros de diálogo
+27/07/05
+Añadidos opcodes: SUB, SUBF, OR, XOR, NOR, AND, SLLV, SRLV, BGT
+Adaptados los formularios para ver registros y memoria para que autoajusten su tamaño al contenido

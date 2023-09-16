@@ -1,0 +1,81 @@
+39
+ADDI R1 R0 #100 // R1 = pImg
+ADDI R2 R0 #414 // R2 = resultImg
+ADDI R3 R0 #16 // R3 -> int = Wp (Width pixel = 16)
+ADDI R4 R0 #14 // R4 -> int = height - 1 - 1 (modificado, añadido un -1 extra)
+ADDI R5 R0 #14 // R5 -> int = width - 1 - 1 (modificado, añadido un -1 extra)
+ADDI R6 R0 #3 // R6 -> int = rows_kernel
+ADDI R7 R0 #3 // R7 -> int = cols_kernel
+// (modificado, instrucción que había sido movida ha sido borrada)
+
+ADDI R8 R0 #0 // R8 -> int = row - 1 (modificado, añadido un -1 extra)
+FOR1:
+BEQ R8 R4 FINFOR1
+
+ADDI R2 R2 #2 // nos ayuda a encajar la imagen en las direcciones de memoria correctas
+// (modificado, instrucción que había sido movida ha sido borrada)
+
+ADDI R9 R0 #0 // R9 -> int = col - 1 (modificado, añadido un -1 extra)
+FOR2:
+BEQ R9 R5 FINFOR2 
+
+ADDF F1 F0 F0 // F1 -> float = 0.0 // (magX) esta es tu magnitud
+// (modificado, instrucción que había sido movida ha sido borrada)
+
+ADDI R10 R0 #0 // R10 -> int = a
+FOR3:
+BEQ R10 R6 FINFOR3
+
+ADDI R11 R0 #0 // R11 -> int = b
+FOR4:
+BEQ R11 R7 FINFOR4
+
+
+
+// magX += pImg[(row - 1 + a) * Wp + col - 1 + b] * kernelx[a][b];
+
+MULT R12 R6 R10 // rows_kernel * a = desp. de la dir. mem. de kernelx[a]
+ADD R13 R12 R11 // rows_kernel * a  + b = sumo el desp. de b, kernelx[a][b]
+LF F2 0(R13) // cargamos en el registro F2, el contenido de la dirección de memoria que tiene R13
+// aquí kernelx[a][b] está listo para usarse
+
+
+ADD R16 R8 R10 // R16 = row - 1 + a
+MULT R17 R16 R3 // R17 = (row - 1 + a) * Wp
+
+ADD R19 R9 R11 // R19 = col - 1 + b
+
+ADD R20 R17 R19 // R20 = (row - 1 + a) * Wp + col - 1 + b
+
+ADD R21 R1 R20 // R21 = pImg[(row - 1 + a) * Wp + col - 1 + b] (sólo es la dir. de mem. del elemento)
+LF F3 0(R21) // F3 = pImg[(row - 1 + a) * Wp + col - 1 + b] (aquí ya buscamos el elemento)
+// aquí pImg[(row - 1 + a) * Wp + col - 1 + b] está listo para usarse
+
+
+
+MULTF F4 F3 F2 // F4 = pImg[(row - 1 + a) * Wp + col - 1 + b] * kernelx[a][b]
+ADDF F1 F1 F4 // F1 = magX += pImg[(row - 1 + a) * Wp + col - 1 + b] * kernelx[a][b];
+// aquí magX ha sido actualizado
+
+
+
+ADDI R11 R11 #1 // b++
+BEQ R0 R0 FOR4
+FINFOR4:
+
+ADDI R10 R10 #1 // a++
+BEQ R0 R0 FOR3
+FINFOR3:
+
+// resultImg[row * Wp + col] = magX;
+ADDI R2 R2 #1 // resultImg++
+SF F1 0(R2) // resultImg[row * Wp + col] = magX;
+
+ADDI R9 R9 #1 // col++
+BEQ R0 R0 FOR2 // simula un salto incondicional
+FINFOR2:
+
+ADDI R8 R8 #1 // row++
+BEQ R0 R0 FOR1 // simula un salto incondicional
+FINFOR1:
+ADD R0 R0 R0 // NO TOCAR ESTA INSTRUCCIÓN, si se borra el programa no funciona

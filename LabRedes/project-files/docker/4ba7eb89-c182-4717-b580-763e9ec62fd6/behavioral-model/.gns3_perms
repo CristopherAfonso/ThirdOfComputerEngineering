@@ -1,0 +1,9 @@
+644:0:0:/behavioral-model/nat.json
+644:0:0:/behavioral-model/repeater.json
+644:1001:1001:/behavioral-model/repeater.p4i
+644:0:0:/behavioral-model/table_repeater.json
+644:0:0:/behavioral-model/.gns3_perms
+644:0:0:/behavioral-model/reflector.json
+664:1000:1000:/behavioral-model/firewall.json
+644:1001:1001:/behavioral-model/basic.json
+777:0:0:/behavioral-model

@@ -1,0 +1,325 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/alumno/simulation/modelsim
+valu
+IXzUFj[Jim2SVh^`YAL;W?1
+VL0?^JT69oU>KD5T3AMb1^2
+Z1 d/home/alumno/simulation/modelsim
+w1688304166
+8/home/alumno/Documentos/pr1_processor_design/alu.v
+F/home/alumno/Documentos/pr1_processor_design/alu.v
+L0 1
+Z2 OV;L;10.1b;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+/home/alumno/Documentos/pr1_processor_design -O0
+!i10b 1
+!s100 W<oJh=R<YBk0RCDnYRKoZ1
+!s85 0
+!s108 1689010953.722744
+!s107 /home/alumno/Documentos/pr1_processor_design/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alumno/Documentos/pr1_processor_design|/home/alumno/Documentos/pr1_processor_design/alu.v|
+!s101 -O0
+vcd
+IibCh9R<@0nb@W7l3LBYVM3
+VL=8Pb=E?L9ILh822cT[GG3
+R1
+w1688992369
+8/home/alumno/Documentos/pr1_processor_design/cd.v
+F/home/alumno/Documentos/pr1_processor_design/cd.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 cnnH5fSD:UVILJ2Ih::3`2
+!s85 0
+!s108 1689010953.703408
+!s107 /home/alumno/Documentos/pr1_processor_design/cd.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alumno/Documentos/pr1_processor_design|/home/alumno/Documentos/pr1_processor_design/cd.v|
+!s101 -O0
+vcpu
+IQXWWFX:_EEdh4TUNJ[1lU3
+VWVmjG2B@fZh?3Ql@TDNiI3
+R1
+w1688749246
+8/home/alumno/Documentos/pr1_processor_design/cpu.v
+F/home/alumno/Documentos/pr1_processor_design/cpu.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 0PjD>zP7PRe4fKfkZC1UF3
+!s85 0
+!s108 1689010953.685479
+!s107 /home/alumno/Documentos/pr1_processor_design/cpu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alumno/Documentos/pr1_processor_design|/home/alumno/Documentos/pr1_processor_design/cpu.v|
+!s101 -O0
+vdatafile
+I29E19=WIUK9?J3DgRJKM]0
+VYDM^NB0;HQ84h:hfCcJYM2
+R1
+Z5 w1688994158
+Z6 8/home/alumno/Documentos/pr1_processor_design/componentes.v
+Z7 F/home/alumno/Documentos/pr1_processor_design/componentes.v
+L0 30
+R2
+r1
+31
+Z8 !s108 1689010953.760363
+Z9 !s107 /home/alumno/Documentos/pr1_processor_design/componentes.v|
+Z10 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alumno/Documentos/pr1_processor_design|/home/alumno/Documentos/pr1_processor_design/componentes.v|
+R3
+R4
+!i10b 1
+!s100 Cla@o_lSC_@c_9dhTnjPM0
+!s85 0
+!s101 -O0
+vextmemmod
+I7A^Qo<N5Pz1bm>2QE:3GC0
+VI1d;FaZ<Nh77l0B8:kC??0
+R1
+R5
+R6
+R7
+L0 133
+R2
+r1
+31
+R8
+R9
+R10
+R3
+R4
+!i10b 1
+!s100 bKTSKCGI2mgZimm]11>8Z3
+!s85 0
+!s101 -O0
+vffd
+I:0MLMWKiSEolERSEKdmij3
+VjTGai8EcUlS51M<UTA4<53
+R1
+R5
+R6
+R7
+L0 98
+R2
+r1
+31
+R8
+R9
+R10
+R3
+R4
+!i10b 1
+!s100 Pj_;b[dA@RU?9Bb[QN4RZ2
+!s85 0
+!s101 -O0
+vmemprog
+IF8g8lU2FhF4IYh:]]`1dU1
+Vd;Q:AZ]5@@]5kaLT=m;oJ1
+R1
+w1688994169
+8/home/alumno/Documentos/pr1_processor_design/memprog.v
+F/home/alumno/Documentos/pr1_processor_design/memprog.v
+L0 3
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 ei[jQP0g]?;gbRaE]hTcO1
+!s85 0
+!s108 1689010953.742052
+!s107 /home/alumno/Documentos/pr1_processor_design/memprog.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alumno/Documentos/pr1_processor_design|/home/alumno/Documentos/pr1_processor_design/memprog.v|
+!s101 -O0
+vmux2
+ID?E6Wob;QKCPjS4EgZ[ge2
+VT8RWJBjAIeM]>7U=5kBkT1
+R1
+R5
+R6
+R7
+L0 68
+R2
+r1
+31
+R8
+R9
+R10
+R3
+R4
+!i10b 1
+!s100 m71E__cJW5G]_<]7TF]cW3
+!s85 0
+!s101 -O0
+vmux4
+Ih8gESSbG7j@IO]JLRZ^9Z1
+V@m74j;^3XFJ7>OzQXh6V`0
+R1
+R5
+R6
+R7
+L0 77
+R2
+r1
+31
+R8
+R9
+R10
+R3
+R4
+!i10b 1
+!s100 `F@[BE_M?1ZQzAR029OHl3
+!s85 0
+!s101 -O0
+vpr1_cpu_extendida
+!i10b 1
+!s100 >kdS@hU[F>Ijk9L[__mhE0
+I73dM`[^N^813ngNBWg6L93
+VH3FA`R^JHXZVJ<zYDN=be1
+R1
+w1688994607
+8/home/alumno/Documentos/pr1_processor_design/cpu_tb.v
+F/home/alumno/Documentos/pr1_processor_design/cpu_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1689010953.790468
+!s107 /home/alumno/Documentos/pr1_processor_design/cpu_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alumno/Documentos/pr1_processor_design|/home/alumno/Documentos/pr1_processor_design/cpu_tb.v|
+!s101 -O0
+R3
+R4
+vregfile
+I4`XLgUOeC[6k8liZ>7hOH2
+VFdF0?O:Ze`dC]X[8j>R<d2
+R1
+R5
+R6
+R7
+L0 4
+R2
+r1
+31
+R8
+R9
+R10
+R3
+R4
+!i10b 1
+!s100 doZ>gS>hBP?<8JQ]dUlQ92
+!s85 0
+!s101 -O0
+vregistro
+IRl_S;EI[9Pb@U;?^lZDin1
+VJ[_h7<:bK^i^`WUS`Li1<1
+R1
+R5
+R6
+R7
+L0 56
+R2
+r1
+31
+R8
+R9
+R10
+R3
+R4
+!i10b 1
+!s100 4E6aalo8mN1KB1fPg;`9K2
+!s85 0
+!s101 -O0
+vsevensegments
+I2NO6l2YcK8^RWV7>fELf82
+VHc_<Yfaho^lHkedIgV_3n0
+R1
+R5
+R6
+R7
+L0 147
+R2
+r1
+31
+R8
+R9
+R10
+R3
+R4
+!i10b 1
+!s100 PDkizBM<YD5Z]mljSYNEc2
+!s85 0
+!s101 -O0
+vstackfile
+IXg[8QdRVjXXZ72QIhNz?o1
+VPZ@`f<:]mUHU_la`Lo66Z1
+R1
+R5
+R6
+R7
+L0 110
+R2
+r1
+31
+R8
+R9
+R10
+R3
+R4
+!i10b 1
+!s100 kMzaSDI2I6RDX<2Ra94e?2
+!s85 0
+!s101 -O0
+vsum
+I36YYjz9^7B?4j<S>lCTR>3
+Vo5_TPA?4Q9mjlj8iZEIm53
+R1
+R5
+R6
+R7
+L0 50
+R2
+r1
+31
+R8
+R9
+R10
+R3
+R4
+!i10b 1
+!s100 lUMk7M<a3YBane>H:Q4mc1
+!s85 0
+!s101 -O0
+vuc
+IhgVXBMF`OzZgW8ZJmNf:80
+VD1e@k`Z4^LBT1S=JJIPzF1
+R1
+w1688766360
+8/home/alumno/Documentos/pr1_processor_design/uc.v
+F/home/alumno/Documentos/pr1_processor_design/uc.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 C6YB5NN1QPFIOMAkLVeMZ3
+!s85 0
+!s108 1689010953.664531
+!s107 /home/alumno/Documentos/pr1_processor_design/uc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alumno/Documentos/pr1_processor_design|/home/alumno/Documentos/pr1_processor_design/uc.v|
+!s101 -O0

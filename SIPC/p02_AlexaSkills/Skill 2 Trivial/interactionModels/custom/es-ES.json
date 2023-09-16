@@ -1,0 +1,98 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "comenzar trivial",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "ayuda",
+            "help"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "no",
+            "terminar"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": [
+            "vuelve a decirlo",
+            "dime otra vez",
+            "repite",
+            "repite de nuevo",
+            "otra vez"
+          ]
+        },
+        {
+          "name": "ClueIntent",
+          "slots": [],
+          "samples": [
+            "ni idea",
+            "más información",
+            "dime una pista",
+            "una pista",
+            "dame una pista"
+          ]
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": [
+            "siguiente",
+            "siguiente pregunta",
+            "dime la siguiente",
+            "pasa palabra",
+            "otra"
+          ]
+        },
+        {
+          "name": "PendingIntent",
+          "slots": [],
+          "samples": [
+            "pendiente",
+            "dime la pendiente",
+            "dime la pregunta pendiente",
+            "cual era la pregunta pendiente"
+          ]
+        },
+        {
+          "name": "AnswerIntent",
+          "slots": [
+            {
+              "name": "numberSlot",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER"
+            }
+          ],
+          "samples": [
+            "La respuesta es {numberSlot}",
+            "Es {numberSlot}",
+            "En {numberSlot}",
+            "En el año {numberSlot}",
+            "Año {numberSlot}",
+            "La respuesta es el {numberSlot}"
+          ]
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": [
+            "quiero continuar",
+            "si"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "18"
+}

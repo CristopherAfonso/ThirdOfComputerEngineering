@@ -1,0 +1,15 @@
+16/03/05
+THIS VERSION DOES NOT MAINTAIN BACK-COMPATIBILITY
+New mnemonics:
+- DADDUI has been replaced by ADDI in order to allow negative constants
+- ADDI => ADD 
+- MULTI => MULT
+- SI => SW
+- LI => LW
+All the examples included have been corrected.
+5/07/05
+New feature: Load/Save registers and memory to/from file.
+27/07/05
+Added new opcodes: SUB, SUBF, OR, XOR, NOR, AND, SLLV, SRLV, BGT
+Register and memory forms adapted to autoadjust their width to the contents
+Fixed bug in these forms when an invalid format number exception raised

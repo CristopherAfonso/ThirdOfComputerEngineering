@@ -1,0 +1,226 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/alumno/pr1_processor_design/simulation/modelsim
+valu
+ILi^CH>1mn9166f5iK1FbR2
+V]hPjUb;_zH8Y9km]3<Z:Q2
+Z1 d/home/alumno/pr1_processor_design/simulation/modelsim
+Z2 w1679318155
+8/home/alumno/pr1_processor_design/alu.v
+F/home/alumno/pr1_processor_design/alu.v
+L0 1
+Z3 OV;L;10.1b;51
+r1
+31
+Z4 o-vlog01compat -work work -O0
+Z5 !s92 -vlog01compat -work work +incdir+/home/alumno/pr1_processor_design -O0
+!i10b 1
+!s100 FmIi^0lT0<>1d5448okYM0
+!s85 0
+!s108 1679481643.893678
+!s107 /home/alumno/pr1_processor_design/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alumno/pr1_processor_design|/home/alumno/pr1_processor_design/alu.v|
+!s101 -O0
+vcd
+I_289CAKfZfCE0lEY[aZe70
+VfS<4mZ;=58^LSkI?U6ZSX0
+R1
+R2
+8/home/alumno/pr1_processor_design/cd.v
+F/home/alumno/pr1_processor_design/cd.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 03nNNbkUOClODQ]^6VX>=0
+!s85 0
+!s108 1679481643.912341
+!s107 /home/alumno/pr1_processor_design/cd.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alumno/pr1_processor_design|/home/alumno/pr1_processor_design/cd.v|
+!s101 -O0
+vCPU
+I8CfJ4zJaPEMPkCb9I11z_2
+V?N=J5oG:JiE_L006ZE5`z3
+R1
+R2
+8/home/alumno/pr1_processor_design/cpu.v
+F/home/alumno/pr1_processor_design/cpu.v
+L0 1
+R3
+r1
+31
+R4
+R5
+n@c@p@u
+!i10b 1
+!s100 leW6`bTn>]GQSjF<CoFFM3
+!s85 0
+!s108 1679481643.875726
+!s107 /home/alumno/pr1_processor_design/cpu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alumno/pr1_processor_design|/home/alumno/pr1_processor_design/cpu.v|
+!s101 -O0
+vcpu_tb
+!i10b 1
+!s100 dHW3U2E>zPUd_n<V@f@A<2
+I1I3AKnEzTfAGKj0`U<[332
+V0P>[JOo>6KEkgKO=1CbUG0
+R1
+R2
+8/home/alumno/pr1_processor_design/cpu_tb.v
+F/home/alumno/pr1_processor_design/cpu_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1679481643.972716
+!s107 /home/alumno/pr1_processor_design/cpu_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alumno/pr1_processor_design|/home/alumno/pr1_processor_design/cpu_tb.v|
+!s101 -O0
+R4
+R5
+vffd
+IYDH^BhTm6L@_U0j@V6HGk1
+VjTGai8EcUlS51M<UTA4<53
+R1
+Z6 w1679318680
+Z7 8/home/alumno/pr1_processor_design/componentes.v
+Z8 F/home/alumno/pr1_processor_design/componentes.v
+L0 61
+R3
+r1
+31
+Z9 !s108 1679481643.950313
+Z10 !s107 /home/alumno/pr1_processor_design/componentes.v|
+Z11 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alumno/pr1_processor_design|/home/alumno/pr1_processor_design/componentes.v|
+R4
+R5
+!i10b 1
+!s100 PK44MCmaW8G@iVYcPiB1L2
+!s85 0
+!s101 -O0
+vmemprog
+IJ7h:nGm1Mo9NhoQo_TGD<1
+VU^4PS^ILhXJSDi0J3ezGm1
+R1
+w1679318622
+8/home/alumno/pr1_processor_design/memprog.v
+F/home/alumno/pr1_processor_design/memprog.v
+L0 3
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 Z0LTF9M9nM;BQbJ[l2B@N2
+!s85 0
+!s108 1679481643.932294
+!s107 /home/alumno/pr1_processor_design/memprog.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alumno/pr1_processor_design|/home/alumno/pr1_processor_design/memprog.v|
+!s101 -O0
+vmux2
+IGMMWIYKnRH`Qa>ZONT^n^1
+VT8RWJBjAIeM]>7U=5kBkT1
+R1
+R6
+R7
+R8
+L0 50
+R3
+r1
+31
+R9
+R10
+R11
+R4
+R5
+!i10b 1
+!s100 <JeSY3OkmjWAie7i=V1VS1
+!s85 0
+!s101 -O0
+vregfile
+IYSH`hSbSFo1SV0?LN0jhf3
+VI5z8<lJcjz;XN9<;Nm>UO3
+R1
+R6
+R7
+R8
+L0 4
+R3
+r1
+31
+R9
+R10
+R11
+R4
+R5
+!i10b 1
+!s100 lHUO?KM;@WbOam[9MOIWg2
+!s85 0
+!s101 -O0
+vregistro
+IlP0=9RQiXBS@L4MDI7@Y51
+VJ[_h7<:bK^i^`WUS`Li1<1
+R1
+R6
+R7
+R8
+L0 38
+R3
+r1
+31
+R9
+R10
+R11
+R4
+R5
+!i10b 1
+!s100 MJ3RKgFlClJXDU7<U5CGY2
+!s85 0
+!s101 -O0
+vsum
+Ic7RKmegO?DPTL1HGBTza>3
+VA7?gbGQM2IRzcJYa:4lZf2
+R1
+R6
+R7
+R8
+L0 30
+R3
+r1
+31
+R9
+R10
+R11
+R4
+R5
+!i10b 1
+!s100 kk85GWN20l4bYQODoFjJk2
+!s85 0
+!s101 -O0
+vuc
+IPUKJEg[eA?PEWC9C3eeX?3
+Vz8KHgW]:OQYOE[H0QO<@O0
+R1
+R2
+8/home/alumno/pr1_processor_design/uc.v
+F/home/alumno/pr1_processor_design/uc.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 CMXgHjz_NZz2nbDWGg7m:3
+!s85 0
+!s108 1679481643.855975
+!s107 /home/alumno/pr1_processor_design/uc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alumno/pr1_processor_design|/home/alumno/pr1_processor_design/uc.v|
+!s101 -O0

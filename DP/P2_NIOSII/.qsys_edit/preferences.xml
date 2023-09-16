@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable>
+  <columns>
+   <connections preferredWidth="207" />
+   <irq preferredWidth="34" />
+   <name preferredWidth="220" />
+   <description preferredWidth="156" />
+   <export preferredWidth="171" />
+   <inputclock preferredWidth="59" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="534" />
+   <clocksource preferredWidth="533" />
+   <frequency preferredWidth="529" />
+  </columns>
+ </clocktable>
+ <library
+   expandedCategories="Project/System,Library/Embedded Processors,Library/DSP/Video and Image Processing,Library/Configuration &amp; Programming,Library/Bridges,Library,Library/Microcontroller Peripherals,Library/Interface Protocols,Library/Memories and Memory Controllers,Library/DSP,Library/Memories and Memory Controllers/On-Chip,Project,Library/Memories and Memory Controllers/External Memory Interfaces,Library/Clock and Reset,Library/PLL" />
+ <window width="1928" height="1026" x="0" y="27" />
+ <hdlexample language="VERILOG" />
+ <generation
+   simulation="NONE"
+   synthesis="1"
+   block_symbol_file="1"
+   path="_PROJECT_NAME_" />
+</preferences>

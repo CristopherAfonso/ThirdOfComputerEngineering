@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Jul 11 09:38:14 2023
+Quartus II 32-bit Version : 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition
+Revision Name : pr1_cpu_extendida
+Top-level Entity Name : cpu
+Family : Cyclone II
+Total logic elements : 19,621
+    Total combinational functions : 8,159
+    Dedicated logic registers : 12,481
+Total registers : 12481
+Total pins : 67
+Total virtual pins : 0
+Total memory bits : 168,448
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

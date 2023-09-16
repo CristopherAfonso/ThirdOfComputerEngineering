@@ -1,0 +1,7 @@
+module CPU(input wire clk, reset, output wire [5:0] opcode);
+  wire s_inc, s_inm, we3, wez, z;
+  // wire [5:0] opcode;
+  wire [2:0] op_alu;
+  cd data_path(clk, reset, s_inc, s_inm, we3, wez, op_alu, z, opcode);
+  uc control_unit(opcode, z, s_inc, s_inm, we3, wez, op_alu);
+endmodule

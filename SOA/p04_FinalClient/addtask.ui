@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddTask</class>
+ <widget class="QWidget" name="AddTask">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>501</width>
+    <height>375</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>501</width>
+    <height>375</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>501</width>
+    <height>375</height>
+   </size>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="tabletTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>495</width>
+     <height>375</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Name Task:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_name_task">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>130</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="maxLength">
+             <number>9</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="addTaskButton">
+            <property name="text">
+             <string>Add Task</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="cleanButton">
+            <property name="text">
+             <string>Clean List</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Time of Task:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_time_of_task">
+            <property name="minimumSize">
+             <size>
+              <width>70</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>70</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>       Period:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_period">
+            <property name="minimumSize">
+             <size>
+              <width>70</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>70</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>   Deadline:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_deadline">
+            <property name="minimumSize">
+             <size>
+              <width>70</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>70</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>17</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="closeButton">
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Close</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="deleteButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Delete Task</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>13</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="minimumSize">
+       <size>
+        <width>481</width>
+        <height>221</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>Delete row with SUPR/DEL</string>
+      </property>
+      <property name="whatsThis">
+       <string/>
+      </property>
+      <property name="accessibleName">
+       <string/>
+      </property>
+      <property name="accessibleDescription">
+       <string/>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>false</bool>
+      </property>
+      <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
+      <row>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>Name Task</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Time of Task</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Period</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Deadline</string>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>5</string>
+       </property>
+      </item>
+      <item row="0" column="2">
+       <property name="text">
+        <string>15</string>
+       </property>
+      </item>
+      <item row="0" column="3">
+       <property name="text">
+        <string>15</string>
+       </property>
+      </item>
+      <item row="1" column="0">
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item row="1" column="1">
+       <property name="text">
+        <string>5</string>
+       </property>
+      </item>
+      <item row="1" column="2">
+       <property name="text">
+        <string>30</string>
+       </property>
+      </item>
+      <item row="1" column="3">
+       <property name="text">
+        <string>30</string>
+       </property>
+      </item>
+      <item row="2" column="0">
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+      <item row="2" column="1">
+       <property name="text">
+        <string>10</string>
+       </property>
+      </item>
+      <item row="2" column="2">
+       <property name="text">
+        <string>40</string>
+       </property>
+      </item>
+      <item row="2" column="3">
+       <property name="text">
+        <string>40</string>
+       </property>
+      </item>
+      <item row="3" column="0">
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item row="3" column="1">
+       <property name="text">
+        <string>10</string>
+       </property>
+      </item>
+      <item row="3" column="2">
+       <property name="text">
+        <string>60</string>
+       </property>
+      </item>
+      <item row="3" column="3">
+       <property name="text">
+        <string>60</string>
+       </property>
+      </item>
+      <item row="4" column="0">
+       <property name="text">
+        <string>AA</string>
+       </property>
+      </item>
+      <item row="4" column="1">
+       <property name="text">
+        <string>5</string>
+       </property>
+      </item>
+      <item row="4" column="2">
+       <property name="text">
+        <string>35</string>
+       </property>
+      </item>
+      <item row="4" column="3">
+       <property name="text">
+        <string>35</string>
+       </property>
+      </item>
+      <item row="5" column="0">
+       <property name="text">
+        <string>BB</string>
+       </property>
+      </item>
+      <item row="5" column="1">
+       <property name="text">
+        <string>10</string>
+       </property>
+      </item>
+      <item row="5" column="2">
+       <property name="text">
+        <string>20</string>
+       </property>
+      </item>
+      <item row="5" column="3">
+       <property name="text">
+        <string>20</string>
+       </property>
+      </item>
+      <item row="6" column="0">
+       <property name="text">
+        <string>CC</string>
+       </property>
+      </item>
+      <item row="6" column="1">
+       <property name="text">
+        <string>25</string>
+       </property>
+      </item>
+      <item row="6" column="2">
+       <property name="text">
+        <string>70</string>
+       </property>
+      </item>
+      <item row="6" column="3">
+       <property name="text">
+        <string>70</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

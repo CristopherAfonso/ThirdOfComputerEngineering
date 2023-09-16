@@ -1,0 +1,25 @@
+module cd(input wire clk, reset, s_inc, s_inm, we3, wez, input wire [2:0] op_alu, output wire z, output wire [5:0] opcode);
+//Camino de datos de instrucciones de un solo ciclo
+
+  wire [15:0] mem_out;
+  wire [9:0] pc_out, mux_to_pc, sum_to_mux_jump;
+  wire [7:0] alu_to_mux_write, mux_write_out, reg1_out, reg2_out;
+  wire alu_zero, out_flag_zero;
+
+  registro #(10) pc(clk, reset, mux_to_pc, pc_out);
+  memprog mem(clk, pc_out, mem_out);
+  mux2 #(10) mux_jump(mem_out[9:0], sum_to_mux_jump, s_inc, mux_to_pc);
+  sum sumador(10'b0000000001, pc_out, sum_to_mux_jump);
+
+  mux2 mux_write(alu_to_mux_write, mem_out[11:4], s_inm, mux_write_out);
+  regfile banc_reg(clk, we3, mem_out[11:8], mem_out[7:4], mem_out[3:0], mux_write_out, reg1_out, reg2_out);
+  alu alu0(reg1_out, reg2_out, op_alu, alu_to_mux_write, alu_zero);
+  ffd flag_zero(clk, reset, alu_zero, wez, out_flag_zero);
+
+  assign opcode = mem_out[15:10];
+
+  wire [5:0] prueba;
+  assign prueba = mem_out[15:10];  
+  assign z = out_flag_zero;
+
+endmodule

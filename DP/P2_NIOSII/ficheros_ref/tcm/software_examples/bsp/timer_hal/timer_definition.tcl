@@ -1,0 +1,2 @@
+set_setting hal.sys_clk_timer peripheral_subsystem_sys_clk_timer
+set_setting hal.timestamp_timer none

@@ -1,0 +1,267 @@
+200
+ADDI R1 R0 #115 // R1 = pImg
+ADDI R2 R0 #413 // R2 = resultImg
+ADDI R3 R0 #16 // R3 -> int = Wp (Width pixel = 16)
+ADDI R4 R0 #14 // R4 -> int = height - 2
+ADDI R5 R0 #11 // R5 -> int = width - 4
+LW R10 0(R0) // R10 = pos. 0 kernel
+LW R11 1(R0) // R11 = pos. 1 kernel
+LW R12 2(R0) // R12 = pos. 2 kernel
+LW R13 3(R0) // R13 = pos. 3 kernel
+LW R14 4(R0) // R14 = pos. 4 kernel
+LW R15 5(R0) // R15 = pos. 5 kernel
+LW R16 6(R0) // R16 = pos. 6 kernel
+LW R17 7(R0) // R17 = pos. 7 kernel
+LW R18 8(R0) // R18 = pos. 8 kernel
+
+
+ADDI R6 R0 #0 // R6 -> int = row - 1
+FOR1:
+
+ADDI R1 R1 #2 // pImg++ (modificado, línea añadida)
+
+ADDI R7 R0 #0 // R7 -> int = col - 1
+FOR2:
+
+ADD R60 R0 R0 // R60 -> int magX0 = 0
+ADD R61 R0 R0 // R60 -> int magX1 = 0
+ADD R62 R0 R0 // R60 -> int magX2 = 0
+ADD R63 R0 R0 // R60 -> int magX3 = 0
+// magX += pImg[(row - 1 + a) * Wp + col - 1 + b] * kernelx[a][b];
+
+
+
+// Traemos desde la memoria, los elementos necesarios para multiplicarlos con cada elemento del kernel
+LW R20 -17(R1)      // R20 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=0]
+LW R21 -16(R1)      // R21 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=1]
+LW R22 -15(R1)      // R22 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=2]
+LW R23  -1(R1)      // R23 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=0]
+LW R24   0(R1)      // R24 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=1]
+LW R25   1(R1)      // R25 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=2]
+LW R26  15(R1)      // R26 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=0]
+LW R27  16(R1)      // R27 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=1]
+LW R28  17(R1)      // R28 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=2]
+
+// (modficado, 27 líneas añadidas)
+LW R30 -16(R1)      // R30 -> int = ++pImg[(row - 1 + a=0) * Wp + col - 1 + b=0]
+LW R31 -15(R1)      // R31 -> int = ++pImg[(row - 1 + a=0) * Wp + col - 1 + b=1]
+LW R32 -14(R1)      // R32 -> int = ++pImg[(row - 1 + a=0) * Wp + col - 1 + b=2]
+LW R33   0(R1)      // R33 -> int = ++pImg[(row - 1 + a=1) * Wp + col - 1 + b=0]
+LW R34   1(R1)      // R34 -> int = ++pImg[(row - 1 + a=1) * Wp + col - 1 + b=1]
+LW R35   2(R1)      // R35 -> int = ++pImg[(row - 1 + a=1) * Wp + col - 1 + b=2]
+LW R36  16(R1)      // R36 -> int = ++pImg[(row - 1 + a=2) * Wp + col - 1 + b=0]
+LW R37  17(R1)      // R37 -> int = ++pImg[(row - 1 + a=2) * Wp + col - 1 + b=1]
+LW R38  18(R1)      // R38 -> int = ++pImg[(row - 1 + a=2) * Wp + col - 1 + b=2]
+
+LW R40 -15(R1)      // R40 -> int = ++pImg[(row - 1 + a=0) * Wp + col - 1 + b=0]
+LW R41 -14(R1)      // R41 -> int = ++pImg[(row - 1 + a=0) * Wp + col - 1 + b=1]
+LW R42 -13(R1)      // R42 -> int = ++pImg[(row - 1 + a=0) * Wp + col - 1 + b=2]
+LW R43   1(R1)      // R43 -> int = ++pImg[(row - 1 + a=1) * Wp + col - 1 + b=0]
+LW R44   2(R1)      // R44 -> int = ++pImg[(row - 1 + a=1) * Wp + col - 1 + b=1]
+LW R45   3(R1)      // R45 -> int = ++pImg[(row - 1 + a=1) * Wp + col - 1 + b=2]
+LW R46  17(R1)      // R46 -> int = ++pImg[(row - 1 + a=2) * Wp + col - 1 + b=0]
+LW R47  18(R1)      // R47 -> int = ++pImg[(row - 1 + a=2) * Wp + col - 1 + b=1]
+LW R48  19(R1)      // R48 -> int = ++pImg[(row - 1 + a=2) * Wp + col - 1 + b=2]
+
+LW R50 -14(R1)      // R50 -> int = ++pImg[(row - 1 + a=0) * Wp + col - 1 + b=0]
+LW R51 -13(R1)      // R51 -> int = ++pImg[(row - 1 + a=0) * Wp + col - 1 + b=1]
+LW R52 -12(R1)      // R52 -> int = ++pImg[(row - 1 + a=0) * Wp + col - 1 + b=2]
+LW R53   2(R1)      // R53 -> int = ++pImg[(row - 1 + a=1) * Wp + col - 1 + b=0]
+LW R54   3(R1)      // R54 -> int = ++pImg[(row - 1 + a=1) * Wp + col - 1 + b=1]
+LW R55   4(R1)      // R55 -> int = ++pImg[(row - 1 + a=1) * Wp + col - 1 + b=2]
+LW R56  18(R1)      // R56 -> int = ++pImg[(row - 1 + a=2) * Wp + col - 1 + b=0]
+LW R57  19(R1)      // R57 -> int = ++pImg[(row - 1 + a=2) * Wp + col - 1 + b=1]
+LW R58  20(R1)      // R58 -> int = ++pImg[(row - 1 + a=2) * Wp + col - 1 + b=2]
+
+
+
+
+
+// Guardamos el resultado de cada operación antes de sumarla a magX
+MULT R20 R20 R10  // R20 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=0] * kernelx[0][0]
+MULT R21 R21 R11  // R21 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=1] * kernelx[0][1]
+MULT R22 R22 R12  // R22 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=2] * kernelx[0][2]
+MULT R23 R23 R13  // R23 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=0] * kernelx[1][0]
+MULT R24 R24 R14  // R24 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=1] * kernelx[1][1]
+MULT R25 R25 R15  // R25 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=2] * kernelx[1][2]
+MULT R26 R26 R16  // R26 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=0] * kernelx[2][0]
+MULT R27 R27 R17  // R27 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=1] * kernelx[2][1]
+MULT R28 R28 R18  // R28 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=2] * kernelx[2][2]
+
+// (modificado, 27 líneas añadidas)
+MULT R30 R30 R10  // R30 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=0] * kernelx[0][0]
+MULT R31 R31 R11  // R31 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=1] * kernelx[0][1]
+MULT R32 R32 R12  // R32 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=2] * kernelx[0][2]
+MULT R33 R33 R13  // R33 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=0] * kernelx[1][0]
+MULT R34 R34 R14  // R34 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=1] * kernelx[1][1]
+MULT R35 R35 R15  // R35 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=2] * kernelx[1][2]
+MULT R36 R36 R16  // R36 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=0] * kernelx[2][0]
+MULT R37 R37 R17  // R37 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=1] * kernelx[2][1]
+MULT R38 R38 R18  // R38 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=2] * kernelx[2][2]
+
+MULT R40 R40 R10  // R40 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=0] * kernelx[0][0]
+MULT R41 R41 R11  // R41 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=1] * kernelx[0][1]
+MULT R42 R42 R12  // R42 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=2] * kernelx[0][2]
+MULT R43 R43 R13  // R43 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=0] * kernelx[1][0]
+MULT R44 R44 R14  // R44 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=1] * kernelx[1][1]
+MULT R45 R45 R15  // R45 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=2] * kernelx[1][2]
+MULT R46 R46 R16  // R46 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=0] * kernelx[2][0]
+MULT R47 R47 R17  // R47 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=1] * kernelx[2][1]
+MULT R48 R48 R18  // R48 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=2] * kernelx[2][2]
+
+MULT R50 R50 R10  // R50 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=0] * kernelx[0][0]
+MULT R51 R51 R11  // R51 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=1] * kernelx[0][1]
+MULT R52 R52 R12  // R52 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=2] * kernelx[0][2]
+MULT R53 R53 R13  // R53 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=0] * kernelx[1][0]
+MULT R54 R54 R14  // R54 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=1] * kernelx[1][1]
+MULT R55 R55 R15  // R55 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=2] * kernelx[1][2]
+MULT R56 R56 R16  // R56 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=0] * kernelx[2][0]
+MULT R57 R57 R17  // R57 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=1] * kernelx[2][1]
+MULT R58 R58 R18  // R58 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=2] * kernelx[2][2]
+
+
+
+// Ahora sumamos todos los contenidos de los registros R20 - R28 al registro R60 (magX)
+ADD R60 R60 R20
+ADD R21 R21 R22 // Agrupamos 
+ADD R23 R23 R24 // Agrupamos
+ADD R25 R25 R26 // Agrupamos
+ADD R27 R27 R28 // Agrupamos
+ADD R21 R21 R23 // Agrupamos grupos
+ADD R25 R25 R27 // Agrupamos grupos
+ADD R21 R21 R25 // Agrupamos grupos de grupos
+ADD R60 R60 R21 // Sumamos todo
+
+// (modificado, añadidas 27 líneas)
+// Ahora sumamos todos los contenidos de los registros R30 - R38 al registro R60 (magX1)
+ADD R61 R61 R30
+ADD R31 R31 R32 // Agrupamos 
+ADD R33 R33 R34 // Agrupamos
+ADD R35 R35 R36 // Agrupamos
+ADD R37 R37 R38 // Agrupamos
+ADD R31 R31 R33 // Agrupamos grupos
+ADD R35 R35 R37 // Agrupamos grupos
+ADD R31 R31 R35 // Agrupamos grupos de grupos
+ADD R61 R61 R31 // Sumamos todo
+
+// Ahora sumamos todos los contenidos de los registros R40 - R48 al registro R60 (magX1)
+ADD R62 R62 R40
+ADD R41 R41 R42 // Agrupamos 
+ADD R43 R43 R44 // Agrupamos
+ADD R45 R45 R46 // Agrupamos
+ADD R47 R47 R48 // Agrupamos
+ADD R41 R41 R43 // Agrupamos grupos
+ADD R45 R45 R47 // Agrupamos grupos
+ADD R41 R41 R45 // Agrupamos grupos de grupos
+ADD R62 R62 R41 // Sumamos todo
+
+// Ahora sumamos todos los contenidos de los registros R50 - R58 al registro R60 (magX1)
+ADD R63 R63 R50
+ADD R51 R51 R52 // Agrupamos 
+ADD R53 R53 R54 // Agrupamos
+ADD R55 R55 R56 // Agrupamos
+ADD R57 R57 R58 // Agrupamos
+ADD R51 R51 R53 // Agrupamos grupos
+ADD R55 R55 R57 // Agrupamos grupos
+ADD R51 R51 R55 // Agrupamos grupos de grupos
+ADD R63 R63 R51 // Sumamos todo
+
+
+
+
+
+// resultImg[row * Wp + col] = magX;
+ADDI R1 R1 #4 // pImg++ (modificado, línea añadida)
+ADDI R2 R2 #4 // resultImg++
+SW R60 0(R2) // resultImg[row * Wp + col] = magX;
+SW R61 1(R2) // resultImg[row * Wp + col] = magX;
+SW R62 2(R2) // resultImg[row * Wp + col] = magX;
+SW R63 3(R2) // resultImg[row * Wp + col] = magX;
+
+ADDI R7 R7 #4 // col++
+BGT R5 R7 FOR2 // implementamos un "do while" en el for2, equivale a "BLT R7 R4 FOR2"
+
+
+
+
+// (modificado, de aquí en adelante todo es nuevo hasta llegar al salto condicional)
+ADDI R2 R2 #2 // resultImg++
+
+ADD R60 R0 R0 // R60 -> int magX = 0
+ADD R61 R0 R0 // R60 -> int magX = 0
+
+// Traemos desde la memoria, los elementos necesarios para multiplicarlos con cada elemento del kernel
+LW R20 -17(R1)      // R20 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=0]
+LW R21 -16(R1)      // R21 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=1]
+LW R22 -15(R1)      // R22 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=2]
+LW R23  -1(R1)      // R23 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=0]
+LW R24   0(R1)      // R24 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=1]
+LW R25   1(R1)      // R25 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=2]
+LW R26  15(R1)      // R26 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=0]
+LW R27  16(R1)      // R27 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=1]
+LW R28  17(R1)      // R28 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=2]
+
+LW R30 -16(R1)      // R30 -> int = ++pImg[(row - 1 + a=0) * Wp + col - 1 + b=0]
+LW R31 -15(R1)      // R31 -> int = ++pImg[(row - 1 + a=0) * Wp + col - 1 + b=1]
+LW R32 -14(R1)      // R32 -> int = ++pImg[(row - 1 + a=0) * Wp + col - 1 + b=2]
+LW R33   0(R1)      // R33 -> int = ++pImg[(row - 1 + a=1) * Wp + col - 1 + b=0]
+LW R34   1(R1)      // R34 -> int = ++pImg[(row - 1 + a=1) * Wp + col - 1 + b=1]
+LW R35   2(R1)      // R35 -> int = ++pImg[(row - 1 + a=1) * Wp + col - 1 + b=2]
+LW R36  16(R1)      // R36 -> int = ++pImg[(row - 1 + a=2) * Wp + col - 1 + b=0]
+LW R37  17(R1)      // R37 -> int = ++pImg[(row - 1 + a=2) * Wp + col - 1 + b=1]
+LW R38  18(R1)      // R38 -> int = ++pImg[(row - 1 + a=2) * Wp + col - 1 + b=2]
+
+
+// Guardamos el resultado de cada operación antes de sumarla a magX
+MULT R20 R20 R10  // R20 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=0] * kernelx[0][0]
+MULT R21 R21 R11  // R21 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=1] * kernelx[0][1]
+MULT R22 R22 R12  // R22 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=2] * kernelx[0][2]
+MULT R23 R23 R13  // R23 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=0] * kernelx[1][0]
+MULT R24 R24 R14  // R24 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=1] * kernelx[1][1]
+MULT R25 R25 R15  // R25 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=2] * kernelx[1][2]
+MULT R26 R26 R16  // R26 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=0] * kernelx[2][0]
+MULT R27 R27 R17  // R27 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=1] * kernelx[2][1]
+MULT R28 R28 R18  // R28 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=2] * kernelx[2][2]
+
+MULT R30 R30 R10  // R30 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=0] * kernelx[0][0]
+MULT R31 R31 R11  // R31 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=1] * kernelx[0][1]
+MULT R32 R32 R12  // R32 -> int = pImg[(row - 1 + a=0) * Wp + col - 1 + b=2] * kernelx[0][2]
+MULT R33 R33 R13  // R33 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=0] * kernelx[1][0]
+MULT R34 R34 R14  // R34 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=1] * kernelx[1][1]
+MULT R35 R35 R15  // R35 -> int = pImg[(row - 1 + a=1) * Wp + col - 1 + b=2] * kernelx[1][2]
+MULT R36 R36 R16  // R36 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=0] * kernelx[2][0]
+MULT R37 R37 R17  // R37 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=1] * kernelx[2][1]
+MULT R38 R38 R18  // R38 -> int = pImg[(row - 1 + a=2) * Wp + col - 1 + b=2] * kernelx[2][2]
+
+
+// Ahora sumamos todos los contenidos de los registros R20 - R28 al registro R60 (magX)
+ADD R60 R60 R20
+ADD R21 R21 R22 // Agrupamos 
+ADD R23 R23 R24 // Agrupamos
+ADD R25 R25 R26 // Agrupamos
+ADD R27 R27 R28 // Agrupamos
+ADD R21 R21 R23 // Agrupamos grupos
+ADD R25 R25 R27 // Agrupamos grupos
+ADD R21 R21 R25 // Agrupamos grupos de grupos
+ADD R60 R60 R21 // Sumamos todo
+
+// Ahora sumamos todos los contenidos de los registros R30 - R38 al registro R60 (magX1)
+ADD R61 R61 R30
+ADD R31 R31 R32 // Agrupamos 
+ADD R33 R33 R34 // Agrupamos
+ADD R35 R35 R36 // Agrupamos
+ADD R37 R37 R38 // Agrupamos
+ADD R31 R31 R33 // Agrupamos grupos
+ADD R35 R35 R37 // Agrupamos grupos
+ADD R31 R31 R35 // Agrupamos grupos de grupos
+ADD R61 R61 R31 // Sumamos todo
+
+
+
+ADDI R1 R1 #2 // pImg++ (modificado, línea añadida)
+ADDI R2 R2 #2 // resultImg++
+SW R60 0(R2) // resultImg[row * Wp + col] = magX;
+SW R61 1(R2) // resultImg[row * Wp + col] = magX;
+
+ADDI R6 R6 #1 // row++
+BGT R4 R6 FOR1 // implementamos un "do while" en el for1, equivale a "BLT R6 R4 FOR1"

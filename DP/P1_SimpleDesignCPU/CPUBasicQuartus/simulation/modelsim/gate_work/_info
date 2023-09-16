@@ -1,0 +1,46 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/alumno/pr1_processor_design/simulation/modelsim
+vCPU
+I;@O^ZYd>f>fY320_jWSIQ1
+VDV_@]Ph0aib[ib`9<T_>10
+Z1 d/home/alumno/pr1_processor_design/simulation/modelsim
+w1679483743
+8CPU.vo
+FCPU.vo
+L0 31
+Z2 OV;L;10.1b;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+n@c@p@u
+!i10b 1
+!s100 ?e<=3:M5jPhI[Zi;aT6<72
+!s85 0
+!s108 1679687249.111506
+!s107 CPU.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|CPU.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+vcpu_tb
+!i10b 1
+!s100 ;[1M9YL?4N`fCen:EmL?V2
+IF8kL6;V^i=M`UU4E=7k2g3
+V0P>[JOo>6KEkgKO=1CbUG0
+R1
+w1679483642
+8/home/alumno/pr1_processor_design/cpu_tb.v
+F/home/alumno/pr1_processor_design/cpu_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1679687249.165540
+!s107 /home/alumno/pr1_processor_design/cpu_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alumno/pr1_processor_design|/home/alumno/pr1_processor_design/cpu_tb.v|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+/home/alumno/pr1_processor_design -O0

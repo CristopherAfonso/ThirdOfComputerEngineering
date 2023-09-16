@@ -1,0 +1,78 @@
+# do pr1_cpu_extendida_run_msim_gate_verilog.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying /opt/altera/12.1sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/12.1sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+. {pr1_cpu_extendida.vo}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module cpu
+# 
+# Top level modules:
+# 	cpu
+# 
+# vlog -vlog01compat -work work +incdir+/home/alumno/Documentos/pr1_processor_design {/home/alumno/Documentos/pr1_processor_design/cpu_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module pr1_cpu_extendida
+# 
+# Top level modules:
+# 	pr1_cpu_extendida
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs="+acc"  pr1_cpu_extendida
+# vsim +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps pr1_cpu_extendida 
+# Loading work.pr1_cpu_extendida
+# Loading work.cpu
+# Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading cycloneii_ver.cycloneii_lcell_ff
+# Loading cycloneii_ver.cycloneii_jtag
+# Loading cycloneii_ver.cycloneii_ram_block
+# Loading cycloneii_ver.cycloneii_ram_register
+# Loading cycloneii_ver.cycloneii_ram_pulse_generator
+# Loading cycloneii_ver.cycloneii_clkctrl
+# Loading cycloneii_ver.cycloneii_mux41
+# Loading cycloneii_ver.cycloneii_ena_reg
+# Loading cycloneii_ver.cycloneii_io
+# Loading cycloneii_ver.cycloneii_mux21
+# Loading cycloneii_ver.cycloneii_dffe
+# Loading cycloneii_ver.cycloneii_asynch_io
+# SDF 10.1b Compiler 2012.04 Apr 27 2012
+# Loading instances from pr1_cpu_extendida_v.sdo
+# ** Warning: (vsim-3017) /home/alumno/Documentos/pr1_processor_design/cpu_tb.v(33): [TFMPC] - Too few port connections. Expected 15, found 11.
+#         Region: /pr1_cpu_extendida/pr1_cpu_extendida
+# ** Warning: (vsim-3015) /home/alumno/Documentos/pr1_processor_design/cpu_tb.v(33): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'altera_reserved_tdi'. The port definition is at: pr1_cpu_extendida.vo(34).
+#         Region: /pr1_cpu_extendida/pr1_cpu_extendida
+# ** Warning: (vsim-3015) /home/alumno/Documentos/pr1_processor_design/cpu_tb.v(33): [PCDPC] - Port size (18 or 18) does not match connection size (16) for port 'dir_mem_ex'. The port definition is at: pr1_cpu_extendida.vo(38).
+#         Region: /pr1_cpu_extendida/pr1_cpu_extendida
+# ** Warning: (vsim-3015) /home/alumno/Documentos/pr1_processor_design/cpu_tb.v(33): [PCDPC] - Port size (1 or 1) does not match connection size (7) for port 'write_ext'. The port definition is at: pr1_cpu_extendida.vo(39).
+#         Region: /pr1_cpu_extendida/pr1_cpu_extendida
+# ** Warning: (vsim-3015) /home/alumno/Documentos/pr1_processor_design/cpu_tb.v(33): [PCDPC] - Port size (1 or 1) does not match connection size (7) for port 'read_ext'. The port definition is at: pr1_cpu_extendida.vo(40).
+#         Region: /pr1_cpu_extendida/pr1_cpu_extendida
+# ** Warning: (vsim-3015) /home/alumno/Documentos/pr1_processor_design/cpu_tb.v(33): [PCDPC] - Port size (1 or 1) does not match connection size (7) for port 'we_ram'. The port definition is at: pr1_cpu_extendida.vo(41).
+#         Region: /pr1_cpu_extendida/pr1_cpu_extendida
+# ** Warning: (vsim-3015) /home/alumno/Documentos/pr1_processor_design/cpu_tb.v(33): [PCDPC] - Port size (16 or 16) does not match connection size (7) for port 'data_bus'. The port definition is at: pr1_cpu_extendida.vo(42).
+#         Region: /pr1_cpu_extendida/pr1_cpu_extendida
+# ** Warning: (vsim-3722) /home/alumno/Documentos/pr1_processor_design/cpu_tb.v(33): [TFMPC] - Missing connection for port 'out_d0'.
+# ** Warning: (vsim-3722) /home/alumno/Documentos/pr1_processor_design/cpu_tb.v(33): [TFMPC] - Missing connection for port 'out_d1'.
+# ** Warning: (vsim-3722) /home/alumno/Documentos/pr1_processor_design/cpu_tb.v(33): [TFMPC] - Missing connection for port 'out_d2'.
+# ** Warning: (vsim-3722) /home/alumno/Documentos/pr1_processor_design/cpu_tb.v(33): [TFMPC] - Missing connection for port 'out_d3'.
+# Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
+# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# Loading timing data from pr1_cpu_extendida_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /pr1_cpu_extendida File: /home/alumno/Documentos/pr1_processor_design/cpu_tb.v
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break key hit 
+# Simulation stop requested.

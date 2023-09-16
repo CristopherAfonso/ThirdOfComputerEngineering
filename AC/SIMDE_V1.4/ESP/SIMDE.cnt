@@ -1,0 +1,61 @@
+:Base SIMDE.hlp
+:Title SIMDE v 1.0
+:Index dummy=dummy.hlp ;(This is necessary when using KLinks - because of a bug in the help
+:Link dummy.hlp        ; compiler. Without this only the first keyword would be looked up!)
+1 Introducción
+2 Introducción=SHM_contents0001@SIMDE.hlp
+2 ILP=SHM_contents0002@SIMDE.hlp
+1 Menús
+2 Menú Archivo=SHM_contents0003@SIMDE.hlp
+2 Menú Ver=SHM_contents0004@SIMDE.hlp
+2 Menú Configurar=SHM_contents0005@SIMDE.hlp
+2 Menú Ejecutar=SHM_contents0006@SIMDE.hlp
+2 Menú Ventana=SHM_contents0007@SIMDE.hlp
+2 Menú Ayuda=SHM_contents0008@SIMDE.hlp
+1 Barras de Herramientas
+2 Barra de Herramientas Estándar=SHM_contents0009@SIMDE.hlp
+2 Barra de Herramientas de Ejecución=SHM_contents0010@SIMDE.hlp
+1 Simulación
+2 Ventana Instrucciones=SHM_contents0011@SIMDE.hlp
+2 Configurar Parámetros Superescalar=SHM_contents0012@SIMDE.hlp
+2 Configurar Parámetros VLIW=SHM_contents0013@SIMDE.hlp
+2 Ventana Registros, Memoria=SHM_contents0014@SIMDE.hlp
+2 Ventana Simulación Superescalar=SHM_contents0015@SIMDE.hlp
+2 Ventana Simulación VLIW=SHM_contents0016@SIMDE.hlp
+2 Código Secuencial
+3 Fichero Código Secuencial=SHM_contents0017@SIMDE.hlp
+3 Ejemplo Código Secuencial=SHM_contents0018@SIMDE.hlp
+2 Diseño del Código VLIW
+3 Crear Código VLIW=SHM_contents0019@SIMDE.hlp
+3 Cargar Código VLIW=SHM_contents0020@SIMDE.hlp
+3 Modificar Código VLIW=SHM_contents0021@SIMDE.hlp
+3 Consejos Creación Código VLIW=SHM_contents0022@SIMDE.hlp
+1 Diseño de las máquinas
+2 Elementos comunes
+3 Estructura Común=SHM_contents0023@SIMDE.hlp
+3 Juego de Instrucciones=SHM_contents0024@SIMDE.hlp
+3 Memoria=SHM_contents0025@SIMDE.hlp
+3 Modos de Direccionamiento=SHM_contents0026@SIMDE.hlp
+3 Registros de Propósito General=SHM_contents0028@SIMDE.hlp
+3 Registros de Punto Flotante=SHM_contents0029@SIMDE.hlp
+3 Unidades Funcionales=SHM_contents0030@SIMDE.hlp
+2 Simulador Superescalar
+3 Máquina Superescalar=SHM_contents0031@SIMDE.hlp
+3 Unidad de Prebúsqueda=SHM_contents0032@SIMDE.hlp
+3 Decodificador=SHM_contents0033@SIMDE.hlp
+3 ROB<->GPR=SHM_contents0034@SIMDE.hlp
+3 ROB<->FPR=SHM_contents0035@SIMDE.hlp
+3 Predicción Salto=SHM_contents0036@SIMDE.hlp
+3 Reorder Buffer=SHM_contents0037@SIMDE.hlp
+3 Estaciones de Reserva=SHM_contents0038@SIMDE.hlp
+3 ALU Cálculo Direcciones=SHM_contents0039@SIMDE.hlp
+2 Simulador VLIW
+3 Máquina VLIW=SHM_contents0040@SIMDE.hlp
+3 NaT (GPR y FPR)=SHM_contents0041@SIMDE.hlp
+3 Registros de Predicado=SHM_contents0042@SIMDE.hlp
+3 Predicación de Operaciones=SHM_contents0043@SIMDE.hlp
+1 Apéndice
+2 Teclado=SHM_contents0044@SIMDE.hlp
+2 Referencias=SHM_contents0045@SIMDE.hlp
+2 Historial=SHM_contents0046@SIMDE.hlp
+2 Contactar con el autor=SHM_contents0047@SIMDE.hlp
